@@ -75,7 +75,11 @@ function IndexPopup() {
           <a
             className='plasmo-underline'
             href=''
-            onClick={() => openLink('https://github.com/RUNFUNRUN')}>
+            onClick={() =>
+              openLink(
+                'https://github.com/RUNFUNRUN/picture-in-picture-anywhere',
+              )
+            }>
             GitHub
           </a>
         </p>
