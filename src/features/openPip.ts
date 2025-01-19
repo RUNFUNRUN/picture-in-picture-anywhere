@@ -4,9 +4,7 @@ export const openPip = async () => {
     return;
   }
 
-  const pipWindow = await (
-    window as any
-  ).documentPictureInPicture.requestWindow({
+  const pipWindow = await window.documentPictureInPicture.requestWindow({
     width: 480,
     height: 800,
   });
@@ -54,6 +52,8 @@ const copyStylesAndScripts = (sourceDoc: Document, targetDoc: Document) => {
     const newScript = targetDoc.createElement('script');
     if (script.src) {
       newScript.src = script.src;
+      newScript.async = script.async;
+      newScript.defer = script.defer;
     } else {
       newScript.textContent = script.textContent;
     }
